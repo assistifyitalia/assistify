@@ -202,8 +202,17 @@ footer a:hover{text-decoration:underline}
 .price-note{max-width:900px;margin:18px auto 0;text-align:center;color:var(--ink-soft);font-size:14.5px}
 .trial{max-width:900px;margin:0 auto 34px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;background:var(--brand-deep);color:#fff;border-radius:20px;padding:20px 26px}
 .trial b{font-size:18px}.trial span{color:#cfe3dd;font-size:15px;display:block;margin-top:4px}
+
+.bill{display:flex;justify-content:center;margin:0 auto 26px}
+.bill div{display:inline-flex;background:var(--chip);border-radius:999px;padding:4px;gap:4px}
+.bill button{border:0;background:transparent;color:var(--ink);font:inherit;font-weight:700;font-size:15px;padding:9px 18px;border-radius:999px;cursor:pointer}
+.bill button[aria-pressed="true"]{background:var(--brand);color:#fff}
+.bill button small{font-weight:700;color:var(--accent-deep);margin-left:6px}
+.bill button[aria-pressed="true"] small{color:#ffd9b8}
+[data-bill="m"] .py{display:none}
+[data-bill="y"] .pm{display:none}
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://assistifyitalia.it/#org","name":"Assistify Tech","alternateName":"Assistify","url":"https://assistifyitalia.it/","logo":"https://assistifyitalia.it/apple-touch-icon.png","email":"info@assistifyitalia.it","telephone":"+39 329 728 6904","address":{"@type":"PostalAddress","addressLocality":"Ragusa","addressRegion":"RG","addressCountry":"IT"},"sameAs":["https://www.instagram.com/assistify.it/","https://www.linkedin.com/company/assistify-tech-italia/"]},{"@type":"WebSite","@id":"https://assistifyitalia.it/#site","url":"https://assistifyitalia.it/","name":"Assistify","inLanguage":"it-IT","publisher":{"@id":"https://assistifyitalia.it/#org"}},{"@type":"Service","name":"Assistente WhatsApp per prenotazioni","serviceType":"Chatbot WhatsApp per prenotazioni e promemoria","provider":{"@id":"https://assistifyitalia.it/#org"},"areaServed":{"@type":"Country","name":"Italia"},"url":"https://assistifyitalia.it/","description":"Assistente virtuale su WhatsApp che prenota i clienti negli orari liberi del calendario, conferma gli appuntamenti e invia i promemoria."},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"I clienti devono scaricare qualcosa?","acceptedAnswer":{"@type":"Answer","text":"No. Usano WhatsApp come fanno già ogni giorno: scrivono al tuo numero con parole loro o scelgono dal menu."}},{"@type":"Question","name":"Quale numero di telefono si usa?","acceptedAnswer":{"@type":"Answer","text":"Un numero WhatsApp dedicato alla tua attività, collegato all'assistente. Ti aiutiamo noi a configurarlo."}},{"@type":"Question","name":"Serve cambiare il gestionale o l'agenda?","acceptedAnswer":{"@type":"Answer","text":"No. L'assistente lavora con Google Calendar: se lo usi già, si collega a quello; altrimenti ne prepariamo uno dedicato alla tua attività."}},{"@type":"Question","name":"E negli studi medici, se un paziente ha un'urgenza?","acceptedAnswer":{"@type":"Answer","text":"L'assistente non fa diagnosi. Segnala subito la richiesta allo studio, mostra il numero da chiamare e, nei casi gravi, invita a contattare il 112 o il pronto soccorso."}},{"@type":"Question","name":"Posso personalizzare servizi, orari e testi?","acceptedAnswer":{"@type":"Answer","text":"Sì: servizi, durate, orari di apertura, giorni speciali e contatti vengono impostati sui dati della tua attività."}},{"@type":"Question","name":"Quanto costa?","acceptedAnswer":{"@type":"Answer","text":"Essenziale 59 € al mese (attivazione 79 €) oppure Plus 119 € al mese (attivazione 149 € con il primo mese incluso). Nessun vincolo: puoi disdire quando vuoi. Trovi tutti i dettagli nella sezione Prezzi."}}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://assistifyitalia.it/#org","name":"Assistify Tech","alternateName":"Assistify","url":"https://assistifyitalia.it/","logo":"https://assistifyitalia.it/apple-touch-icon.png","email":"info@assistifyitalia.it","telephone":"+39 329 728 6904","address":{"@type":"PostalAddress","addressLocality":"Ragusa","addressRegion":"RG","addressCountry":"IT"},"sameAs":["https://www.instagram.com/assistify.it/","https://www.linkedin.com/company/assistify-tech-italia/"]},{"@type":"WebSite","@id":"https://assistifyitalia.it/#site","url":"https://assistifyitalia.it/","name":"Assistify","inLanguage":"it-IT","publisher":{"@id":"https://assistifyitalia.it/#org"}},{"@type":"Service","name":"Assistente WhatsApp per prenotazioni","serviceType":"Chatbot WhatsApp per prenotazioni e promemoria","provider":{"@id":"https://assistifyitalia.it/#org"},"areaServed":{"@type":"Country","name":"Italia"},"url":"https://assistifyitalia.it/","description":"Assistente virtuale su WhatsApp che prenota i clienti negli orari liberi del calendario, conferma gli appuntamenti e invia i promemoria."},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"I clienti devono scaricare qualcosa?","acceptedAnswer":{"@type":"Answer","text":"No. Usano WhatsApp come fanno già ogni giorno: scrivono al tuo numero con parole loro o scelgono dal menu."}},{"@type":"Question","name":"Quale numero di telefono si usa?","acceptedAnswer":{"@type":"Answer","text":"Un numero WhatsApp dedicato alla tua attività, collegato all'assistente. Ti aiutiamo noi a configurarlo."}},{"@type":"Question","name":"Serve cambiare il gestionale o l'agenda?","acceptedAnswer":{"@type":"Answer","text":"No. L'assistente lavora con Google Calendar: se lo usi già, si collega a quello; altrimenti ne prepariamo uno dedicato alla tua attività."}},{"@type":"Question","name":"E negli studi medici, se un paziente ha un'urgenza?","acceptedAnswer":{"@type":"Answer","text":"L'assistente non fa diagnosi. Segnala subito la richiesta allo studio, mostra il numero da chiamare e, nei casi gravi, invita a contattare il 112 o il pronto soccorso."}},{"@type":"Question","name":"Posso personalizzare servizi, orari e testi?","acceptedAnswer":{"@type":"Answer","text":"Sì: servizi, durate, orari di apertura, giorni speciali e contatti vengono impostati sui dati della tua attività."}},{"@type":"Question","name":"Quanto costa?","acceptedAnswer":{"@type":"Answer","text":"Essenziale 59 € al mese (attivazione 79 €) oppure Plus 119 € al mese (attivazione 149 € con il primo mese incluso). Con il piano annuale l'attivazione è gratis: Essenziale 590 € l'anno, Plus 1.290 € l'anno. Trovi tutti i dettagli nella sezione Prezzi."}}]}]}</script>
 </head>
 <body>
 
@@ -361,23 +370,24 @@ footer a:hover{text-decoration:underline}
   </section>
 
 
-  <section id="prezzi" style="padding-top:0">
+  <section id="prezzi" style="padding-top:0" data-bill="m">
     <div class="wrap">
       <div class="sec-head">
         <p class="eyebrow">Prezzi</p>
         <h2>Prezzi chiari, senza vincoli.</h2>
-        <p class="lead">Scegli il piano in base a quanti appuntamenti gestisci. Puoi disdire quando vuoi.</p>
+        <p class="lead">Scegli il piano in base a quanti appuntamenti gestisci, con pagamento mensile o annuale.</p>
       </div>
       <div class="trial">
         <div><b>Provalo gratis per 7 giorni</b><span>Scrivi dal tuo telefono al nostro numero demo e prenota come farebbe un tuo cliente. Senza impegno.</span></div>
         <a class="btn btn-accent" href="https://wa.me/393297286904?text=Ciao%2C%20vorrei%20provare%20gratis%20la%20demo%20di%20Assistify%20per%20la%20mia%20attivit%C3%A0" target="_blank" rel="noopener">Prova la demo gratis</a>
       </div>
+      <div class="bill"><div role="group" aria-label="Scegli la fatturazione"><button type="button" data-v="m" aria-pressed="true">Mensile</button><button type="button" data-v="y" aria-pressed="false">Annuale<small>risparmi</small></button></div></div>
       <div class="price-grid">
         <div class="plan">
           <h3>Essenziale</h3>
           <p class="for">Per chi lavora da solo o con pochi appuntamenti.</p>
-          <p class="amount">59 €<small> / mese</small></p>
-          <p class="setup">Attivazione una tantum: <b>79 €</b></p>
+          <p class="amount pm">59 €<small> / mese</small></p><p class="amount py">590 €<small> / anno</small></p>
+          <p class="setup pm">Attivazione una tantum: <b>79 €</b></p><p class="setup py"><b>2 mesi gratis</b> e <b>attivazione gratis</b> (equivale a 49 € al mese).</p>
           <ul><li><svg><use href="#i-check"/></svg><span>Fino a <b>100 appuntamenti</b> al mese</span></li><li><svg><use href="#i-check"/></svg><span>Capisce i messaggi scritti, non solo il menù</span></li><li><svg><use href="#i-check"/></svg><span>Prenota, sposta e cancella 24 ore su 24</span></li><li><svg><use href="#i-check"/></svg><span>1 numero WhatsApp, 1 collaboratore</span></li><li><svg><use href="#i-check"/></svg><span>Promemoria al cliente il giorno prima</span></li><li><svg><use href="#i-check"/></svg><span>Avviso di ogni prenotazione via email</span></li><li><svg><use href="#i-check"/></svg><span>Google Calendar + foglio riepilogo</span></li><li><svg><use href="#i-check"/></svg><span>Assistenza via email</span></li></ul>
           <a class="btn btn-ghost btn-line" href="https://wa.me/393297286904?text=Ciao%2C%20vorrei%20provare%20gratis%20la%20demo%20di%20Assistify%20per%20la%20mia%20attivit%C3%A0" target="_blank" rel="noopener">Inizia con Essenziale</a>
         </div>
@@ -385,8 +395,8 @@ footer a:hover{text-decoration:underline}
           <span class="tag">Consigliato</span>
           <h3>Plus</h3>
           <p class="for">Per saloni e studi con più collaboratori.</p>
-          <p class="amount">119 €<small> / mese</small></p>
-          <p class="setup">Attivazione <b>149 €</b> con il <b>primo mese incluso</b>: l'abbonamento parte dal secondo mese.</p>
+          <p class="amount pm">119 €<small> / mese</small></p><p class="amount py">1.290 €<small> / anno</small></p>
+          <p class="setup pm">Attivazione <b>149 €</b> con il <b>primo mese incluso</b>: l'abbonamento parte dal secondo mese.</p><p class="setup py"><b>1 mese gratis</b> e <b>attivazione gratis</b> (equivale a 107,50 € al mese).</p>
           <ul><li><svg><use href="#i-check"/></svg><span>Fino a <b>250 appuntamenti</b> al mese</span></li><li><svg><use href="#i-check"/></svg><span>Tutto quello dell'Essenziale</span></li><li><svg><use href="#i-check"/></svg><span>Fino a <b>5 collaboratori</b>, ognuno con la sua agenda</span></li><li><svg><use href="#i-check"/></svg><span>2 promemoria al cliente: giorno prima e 2 ore prima</span></li><li><svg><use href="#i-check"/></svg><span>Agenda del giorno a ogni collaboratore, ogni mattina</span></li><li><svg><use href="#i-check"/></svg><span>Modifiche a servizi, orari e testi quando vuoi</span></li><li><svg><use href="#i-check"/></svg><span>Assistenza prioritaria su WhatsApp</span></li></ul>
           <a class="btn btn-accent" href="https://wa.me/393297286904?text=Ciao%2C%20vorrei%20provare%20gratis%20la%20demo%20di%20Assistify%20per%20la%20mia%20attivit%C3%A0" target="_blank" rel="noopener">Scegli Plus</a>
         </div>
@@ -416,7 +426,7 @@ footer a:hover{text-decoration:underline}
         <details><summary>E negli studi medici, se un paziente ha un'urgenza?</summary><p>L'assistente non fa diagnosi. Segnala subito la richiesta allo studio, mostra il numero da chiamare e, nei casi gravi, invita a contattare il 112 o il pronto soccorso.</p></details>
         <details><summary>Posso personalizzare servizi, orari e testi?</summary><p>Sì: servizi, durate, orari di apertura, giorni speciali e contatti vengono impostati sui dati della tua attività.</p></details>
         <details><summary>Come funziona la prova gratuita?</summary><p>Ci scrivi su WhatsApp e ti abilitiamo per 7 giorni al nostro numero demo, nel settore della tua attività. Prenoti, sposti e cancelli come farebbe un tuo cliente. Non serve carta di credito e non ti impegna a nulla.</p></details>
-        <details><summary>Quanto costa?</summary><p>Essenziale 59 € al mese (attivazione 79 €) oppure Plus 119 € al mese (attivazione 149 € con il primo mese incluso). Nessun vincolo: puoi disdire quando vuoi. Trovi tutti i dettagli nella sezione Prezzi.</p></details>
+        <details><summary>Quanto costa?</summary><p>Essenziale 59 € al mese (attivazione 79 €) oppure Plus 119 € al mese (attivazione 149 € con il primo mese incluso). Con il piano annuale l'attivazione è gratis: Essenziale 590 € l'anno, Plus 1.290 € l'anno. Trovi tutti i dettagli nella sezione Prezzi.</p></details>
       </div>
     </div>
   </section>
@@ -471,5 +481,6 @@ footer a:hover{text-decoration:underline}
 </script>
 
 <script>(()=>{const b=document.querySelector('.menu-btn'),m=document.getElementById('mnav');if(!b||!m)return;b.addEventListener('click',()=>{const o=m.hidden;m.hidden=!o;b.setAttribute('aria-expanded',String(o));b.setAttribute('aria-label',o?'Chiudi il menu':'Apri il menu');});m.addEventListener('click',e=>{if(e.target.closest('a')){m.hidden=true;b.setAttribute('aria-expanded','false');}});})();</script>
+<script>(()=>{document.querySelectorAll('[data-bill]').forEach(box=>{const bs=box.querySelectorAll('.bill button');bs.forEach(b=>b.addEventListener('click',()=>{box.dataset.bill=b.dataset.v;bs.forEach(x=>x.setAttribute('aria-pressed',String(x===b)))}))})})();</script>
 </body>
 </html>
