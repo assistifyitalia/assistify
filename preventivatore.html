@@ -7,41 +7,43 @@
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<title>Preventivo Smart: preventivi con il tuo logo | Assistify</title>
-<meta name="description" content="Crea preventivi con il tuo logo in un minuto: domande al cliente su WhatsApp, costi e margini sotto controllo, PDF pronto da inviare. Demo gratis 7 giorni.">
+<title>Preventivo Smart: preventivi con il tuo logo, anche con l'AI | Assistify</title>
+<meta name="description" content="Preventivo Smart è la dashboard online per fare preventivi con il tuo logo: listino, totali automatici, PDF e invio su WhatsApp o email; il cliente accetta con un tocco. Con il piano Plus l'AI lo compila, confronta i prezzi e lo invia. Prova gratis 7 giorni.">
 <link rel="canonical" href="https://assistifyitalia.it/preventivatore.html">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Assistify">
 <meta property="og:locale" content="it_IT">
-<meta property="og:title" content="Preventivi con il tuo marchio, pronti in un minuto">
-<meta property="og:description" content="Crea preventivi con il tuo logo in un minuto: domande al cliente su WhatsApp, costi e margini sotto controllo, PDF pronto da inviare. Demo gratis 7 giorni.">
+<meta property="og:title" content="Preventivi con il tuo logo, pronti in un minuto. Anche con l'AI.">
+<meta property="og:description" content="Dashboard online per preventivi: listino, totali automatici, PDF con il tuo logo e invio su WhatsApp o email. Con Plus l'AI lo compila da un messaggio. Prova gratis 7 giorni.">
 <meta property="og:url" content="https://assistifyitalia.it/preventivatore.html">
 <meta property="og:image" content="https://assistifyitalia.it/demo-poster.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <style>
 :root{
-  --ground:#f6f3ee; --surface:#ffffff; --ink:#0b2a26; --ink-soft:#4d625d; --line:#e2ddd4; --field:#fbfaf7;
-  --brand:#0e5c52; --brand-deep:#062e29; --accent:#f0a262; --accent-deep:#e0773a; --accent-ink:#062e29;
-  --chip:#ebe6dc; --hero-soft:#bfe0d8; --bad:#b3261e; --radius:18px; color-scheme:light;
+--ground:#f6f3ee; --surface:#ffffff; --ink:#0b2a26; --ink-soft:#4d625d; --line:#e2ddd4; --field:#fbfaf7;
+--brand:#0e5c52; --brand-deep:#062e29; --accent:#f0a262; --accent-deep:#e0773a; --accent-ink:#062e29;
+--chip:#ebe6dc; --hero-soft:#bfe0d8; --radius:18px; --app:#0f766e; color-scheme:light;
 }
 @media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --ground:#071f1c; --surface:#0c2b27; --ink:#eef4f2; --ink-soft:#9fbab3; --line:#1d3f39; --field:#0a2521;
-    --chip:#12352f; --bad:#ff8a80; color-scheme:dark;
-  }
+:root:not([data-theme="light"]){
+--ground:#071f1c; --surface:#0c2b27; --ink:#eef4f2; --ink-soft:#9fbab3; --line:#1d3f39; --field:#0a2521;
+--chip:#12352f; color-scheme:dark;
+}
 }
 :root[data-theme="dark"]{
-  --ground:#071f1c; --surface:#0c2b27; --ink:#eef4f2; --ink-soft:#9fbab3; --line:#1d3f39; --field:#0a2521;
-  --chip:#12352f; --bad:#ff8a80; color-scheme:dark;
+--ground:#071f1c; --surface:#0c2b27; --ink:#eef4f2; --ink-soft:#9fbab3; --line:#1d3f39; --field:#0a2521;
+--chip:#12352f; color-scheme:dark;
 }
 *{box-sizing:border-box}
 [hidden]{display:none!important}
-body{margin:0;background:var(--ground);color:var(--ink);font:400 17px/1.6 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ground);color:var(--ink);font:400 17px/1.6 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
-.wrap{max-width:760px;margin:0 auto;padding-inline:20px}
+.wrap{max-width:1040px;margin:0 auto;padding-inline:20px}
+.narrow{max-width:760px}
 h1,h2,h3{margin:0;letter-spacing:-.025em;text-wrap:balance;line-height:1.15}
 p{margin:0}
 .eyebrow{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
@@ -49,114 +51,14 @@ p{margin:0}
 .btn:hover{transform:translateY(-1px)}
 .btn-accent{background:var(--accent);color:var(--accent-ink)}
 .btn-accent:hover{background:#f4b27a}
-.btn-line{background:transparent;border-color:var(--brand);color:var(--brand)}
-:root[data-theme="dark"] .btn-line{border-color:var(--accent);color:var(--accent)}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .btn-line{border-color:var(--accent);color:var(--accent)}}
-.btn[disabled]{opacity:.6;cursor:wait;transform:none}
-.btn svg{width:18px;height:18px;flex-shrink:0}
+.btn-ghost{border-color:rgba(255,255,255,.35);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.08)}
+.btn-line{background:transparent;border-color:var(--line);color:var(--ink)}
 
 .top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--brand-deep);border-bottom:1px solid rgba(255,255,255,.08)}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px;max-width:1120px}
 .logo{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:800;font-size:21px;letter-spacing:-.03em}
 .logo svg{width:34px;height:34px;flex-shrink:0}
-.back{color:#cfe6e0;text-decoration:none;font-size:15px;font-weight:600}
-.back:hover{color:#fff}
-
-.hero{background:radial-gradient(110% 90% at 20% 0%,#12776a 0%,#0a4239 45%,var(--brand-deep) 100%);color:#fff;padding-block:48px 56px}
-.hero h1{font-size:clamp(32px,5.4vw,48px);font-weight:800;letter-spacing:-.035em;margin-top:12px}
-.hero .lead{color:var(--hero-soft);margin-top:16px;font-size:clamp(17px,1.8vw,19px);max-width:60ch}
-.path{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px;padding:0;list-style:none;counter-reset:p}
-.path li{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:14px 16px;font-size:15px;color:#e3f1ed;counter-increment:p}
-.path li::before{content:counter(p);display:grid;place-items:center;width:28px;height:28px;border-radius:9px;background:var(--accent);color:var(--accent-ink);font-weight:800;margin-bottom:8px}
-.path b{display:block;color:#fff}
-@media (max-width:640px){.path{grid-template-columns:1fr}}
-
-form{display:grid;gap:18px;padding-block:32px 24px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;display:grid;gap:16px}
-.card h2{font-size:22px;font-weight:800}
-.card .sub{color:var(--ink-soft);font-size:15px;margin-top:-8px}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-@media (max-width:600px){.grid2{grid-template-columns:1fr}}
-.f{display:grid;gap:6px;font-weight:600;font-size:15.5px}
-.f .n{color:var(--accent-deep);font-weight:800;margin-right:4px}
-.f small{font-weight:400;color:var(--ink-soft);font-size:13.5px}
-.req{color:var(--accent-deep)}
-input,select,textarea{font:16px system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--field);border:1px solid var(--line);border-radius:12px;padding:12px 14px;width:100%}
-textarea{min-height:76px;resize:vertical}
-input:focus,select:focus,textarea:focus{outline:2px solid var(--accent);outline-offset:1px}
-input:user-invalid,select:user-invalid{border-color:var(--bad)}
-.radios{display:flex;flex-wrap:wrap;gap:8px}
-.radios label{display:flex;align-items:center;gap:8px;background:var(--chip);border-radius:999px;padding:9px 14px;font-weight:600;font-size:15px;cursor:pointer}
-.radios input{width:auto;accent-color:var(--brand)}
-.consent{display:flex;gap:12px;align-items:flex-start;font-size:15px;color:var(--ink-soft)}
-.consent input{width:20px;height:20px;margin-top:2px;flex-shrink:0;accent-color:var(--brand)}
-.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
-.send{display:grid;gap:12px}
-.msg{border-radius:14px;padding:14px 16px;font-size:15.5px}
-.msg.err{background:color-mix(in srgb,var(--bad) 12%,transparent);color:var(--bad)}
-
-.done{padding-block:40px 24px}
-.done .card{text-align:left}
-.done .big{width:56px;height:56px;border-radius:16px;background:var(--brand);display:grid;place-items:center}
-.done .big svg{width:30px;height:30px;color:#fff}
-.done h2{font-size:clamp(26px,4vw,34px)}
-.done p{color:var(--ink-soft)}
-.actions{display:flex;flex-wrap:wrap;gap:10px}
-
-footer{padding-block:28px 44px;color:var(--ink-soft);font-size:14px}
-footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;align-items:center}
-footer a{text-decoration:none;font-weight:600}
-footer a:hover{text-decoration:underline}
-
-.feats{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-@media (max-width:640px){.feats{grid-template-columns:1fr}}
-.feat{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px;display:grid;gap:6px}
-.feat b{font-size:17px}
-.feat p{color:var(--ink-soft);font-size:15.5px}
-.feat .ic{width:40px;height:40px;border-radius:11px;background:var(--chip);display:grid;place-items:center;color:var(--brand)}
-:root[data-theme="dark"] .feat .ic{color:var(--accent)}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .feat .ic{color:var(--accent)}}
-.feat .ic svg{width:22px;height:22px}
-.sec{padding-block:40px 8px;display:grid;gap:18px}
-.sec h2{font-size:clamp(24px,3.6vw,32px);font-weight:800}
-.sec .lead{color:var(--ink-soft);max-width:62ch}
-.who{display:flex;flex-wrap:wrap;gap:10px}
-.who span{background:var(--surface);border:1px solid var(--line);padding:9px 15px;border-radius:999px;font-weight:600;font-size:15px}
-.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
-.btn-ghost{border-color:rgba(255,255,255,.35);color:#fff}
-.btn-ghost:hover{background:rgba(255,255,255,.08)}
-.cta{background:radial-gradient(100% 120% at 80% 0%,#12776a,var(--brand-deep) 70%);color:#fff;border-radius:24px;padding:clamp(26px,5vw,44px);display:grid;gap:14px;margin-block:40px 10px}
-.cta p{color:var(--hero-soft)}
-.cta .actions{display:flex;flex-wrap:wrap;gap:10px}
-
-.steps4{grid-template-columns:repeat(4,1fr)}
-@media (max-width:900px){.steps4{grid-template-columns:1fr 1fr}}
-@media (max-width:560px){.steps4{grid-template-columns:1fr}}
-.mock{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;align-items:start}
-@media (max-width:760px){.mock{grid-template-columns:1fr}}
-.mwin,.mdoc{background:#fff;color:#1b1d22;border-radius:16px;overflow:hidden;box-shadow:0 18px 50px rgba(6,46,41,.18);border:1px solid var(--line)}
-.mbar{background:#1f2430;display:flex;align-items:center;gap:6px;padding:10px 12px}
-.mbar span{width:10px;height:10px;border-radius:50%;background:#ffffff33}
-.mbar em{font-style:normal;color:#fff;font-size:13px;font-weight:600;margin-left:8px}
-.mbody,.mdb{padding:16px;display:grid;gap:2px}
-.mtabs{display:flex;gap:6px;margin-bottom:10px;flex-wrap:wrap}
-.mtabs i{font-style:normal;font-size:12.5px;font-weight:600;border:1px solid #e3e1dc;border-radius:999px;padding:4px 10px}
-.mtabs i.on{background:#1f2430;color:#fff;border-color:#1f2430}
-.mrow{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px solid #eeece7;font-size:14.5px}
-.mrow b{white-space:nowrap}
-.mrow.tot{font-weight:800;font-size:16px;border-bottom:0}
-.mrow.soft{color:#626672}
-.mrow.good b{color:#1d7a4a}
-.mrow.gold{border-top:3px solid #c8a45a}
-.mhead{background:#1f2430;color:#fff;display:flex;gap:12px;align-items:center;padding:16px}
-.mhead small{display:block;opacity:.8;font-size:12.5px}
-.mlogo{width:40px;height:40px;border-radius:10px;background:#ffffff1f;display:grid;place-items:center;font-weight:800}
-.mt{font-size:18px}.mdb small{color:#626672;margin-bottom:8px}
-.mbtns{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
-.mbtns span{font-size:13px;font-weight:700;border-radius:8px;padding:8px 12px}
-.mb1{background:#1f2430;color:#fff}.mb2{border:1px solid #e3e1dc}
-
-/* menu principale */
 .nav{display:flex;align-items:center;gap:22px}
 .nav a{color:#cfe6e0;text-decoration:none;font-size:15px;font-weight:600}
 .nav a:hover,.nav a[aria-current="page"]:not(.btn){color:#fff}
@@ -170,76 +72,146 @@ footer a:hover{text-decoration:underline}
 @media (min-width:821px){.mnav{display:none!important}}
 @media (max-width:380px){.nav .btn{display:none}}
 
-/* --- animazione Preventivo Smart --- */
+/* hero + demo animata */
+.hero{background:radial-gradient(110% 90% at 20% 0%,#12776a 0%,#0a4239 45%,var(--brand-deep) 100%);color:#fff;padding-block:48px 56px}
+.hero h1{font-size:clamp(32px,5.2vw,52px);font-weight:800;letter-spacing:-.035em;margin-top:12px;max-width:17ch}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero .lead{color:var(--hero-soft);margin-top:16px;font-size:clamp(17px,1.8vw,19px);max-width:58ch}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.trust{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:20px;padding:0;list-style:none;font-size:14.5px;color:#dff1ec}
+.trust li{display:flex;gap:7px;align-items:center}
+.trust li::before{content:"";width:16px;height:16px;border-radius:50%;background:var(--accent);flex-shrink:0;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5' fill='none' stroke='%23000' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5' fill='none' stroke='%23000' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat}
+
+.stage{margin-top:38px}
+.asteps{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:22px}
+@media (max-width:760px){.asteps{grid-template-columns:1fr 1fr}}
+.asteps div{border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.07);color:#dff1ec;border-radius:14px;padding:11px 13px;font-size:14px;font-weight:600;display:flex;gap:10px;align-items:center;transition:border-color .3s,background .3s}
+.asteps div b{width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.14);color:#fff;display:grid;place-items:center;font-size:13px;flex-shrink:0;transition:background .3s,color .3s}
+.asteps div.on{background:rgba(240,162,98,.16);border-color:var(--accent);color:#fff}
+.asteps div.on b{background:var(--accent);color:var(--accent-ink)}
+.mock{display:grid;grid-template-columns:1.3fr auto;gap:clamp(18px,4vw,44px);align-items:center}
+@media (max-width:820px){.mock{grid-template-columns:1fr;justify-items:center}.mwin{width:100%}}
 .anim .a{opacity:0;transform:translateY(8px);transition:opacity .45s ease,transform .45s ease}
 .anim .a.on{opacity:1;transform:none}
 .anim.static .a{opacity:1;transform:none}
-.mbar svg{width:18px;height:18px;margin-left:8px;flex-shrink:0}
-.mbar em{margin-left:6px}
-.mhead .mlogo{background:none;padding:0}
-.mhead .mlogo svg{width:40px;height:40px;display:block}
-.yourlogo{margin-left:auto;font-size:11px;font-weight:700;background:var(--accent);color:var(--accent-ink);border-radius:999px;padding:3px 9px;white-space:nowrap}
-.mdoc{position:relative}
-.accepted{position:absolute;right:14px;bottom:16px;background:#1d7a4a;color:#fff;font-weight:800;font-size:13px;border-radius:999px;padding:6px 12px;box-shadow:0 8px 20px rgba(0,0,0,.2)}
-.mb1.pulse{animation:pulse 1s ease 2}
-@keyframes pulse{50%{transform:scale(1.07);box-shadow:0 0 0 6px rgba(240,162,98,.45)}}
-.asteps{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:18px}
-@media (max-width:760px){.asteps{grid-template-columns:1fr 1fr}}
-.asteps div{border:1px solid var(--line);background:var(--surface);border-radius:14px;padding:12px 14px;font-size:14.5px;font-weight:600;display:flex;gap:10px;align-items:center;transition:border-color .3s,box-shadow .3s}
-.asteps div b{width:26px;height:26px;border-radius:50%;background:var(--chip);display:grid;place-items:center;font-size:13px;flex-shrink:0;transition:background .3s,color .3s}
-.asteps div.on{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent)}
-.asteps div.on b{background:var(--accent);color:var(--accent-ink)}
-.sectors{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px}
-@media (max-width:820px){.sectors{grid-template-columns:1fr}}
-.sdoc{background:#fff;color:#1b1d22;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 10px 30px rgba(6,46,41,.12)}
-.sdoc .sh{color:#fff;display:flex;gap:10px;align-items:center;padding:14px}
-.sdoc .sh i{font-style:normal;width:36px;height:36px;border-radius:10px;background:#ffffff2e;display:grid;place-items:center;font-weight:800}
-.sdoc .sh small{display:block;opacity:.85;font-size:12px}
-.sdoc .sb{padding:12px 14px;display:grid}
-.sdoc .sb p{margin:8px 0 0;font-size:12.5px;color:#626672}
 
-.stage{background:radial-gradient(120% 140% at 15% 0%,#12776a,var(--brand-deep) 65%);border-radius:28px;padding:clamp(18px,3.5vw,38px);margin-top:22px;color:#fff}
-.stage .asteps{margin:0 0 26px}
-.stage .asteps div{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.16);color:#dff1ec}
-.stage .asteps div b{background:rgba(255,255,255,.14);color:#fff}
-.stage .asteps div.on{background:rgba(240,162,98,.16);border-color:var(--accent);color:#fff}
-.stage .mock{grid-template-columns:1.25fr auto;gap:clamp(18px,4vw,48px);align-items:center}
-@media (max-width:760px){.stage .mock{grid-template-columns:1fr;justify-items:center}.stage .mwin{width:100%}}
-.stage .mwin{box-shadow:0 30px 70px rgba(0,0,0,.35);border:0}
-.phone2{width:290px;max-width:100%;background:#0d1117;border-radius:40px;padding:11px;box-shadow:0 30px 70px rgba(0,0,0,.45);position:relative}
-.phone2:before{content:"";position:absolute;top:19px;left:50%;width:84px;height:20px;margin-left:-42px;background:#0d1117;border-radius:12px;z-index:2}
-.phone2 .scr{background:#f4f2ee;border-radius:30px;overflow:hidden;min-height:470px;padding:44px 10px 14px;display:flex;flex-direction:column;gap:10px}
-.phone2 .mdoc{box-shadow:0 8px 22px rgba(0,0,0,.14);border:0}
-.phone2 .wab{align-self:flex-start;background:#fff;color:#1b1d22;border-radius:14px 14px 14px 4px;padding:9px 12px;font-size:13px;box-shadow:0 2px 6px rgba(0,0,0,.08)}
-.phone2 .wab.me{align-self:flex-end;background:#d9fdd3;border-radius:14px 14px 4px 14px;font-weight:600}
-.phone2 .accepted{position:static;align-self:center;margin-top:2px}
-.stage .cap{display:flex;justify-content:space-between;gap:12px;margin-top:18px;font-size:13.5px;color:#cfe6e0;flex-wrap:wrap}
-/* --- Prezzi --- */
-.price-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;max-width:900px;margin:0 auto}
-@media (max-width:760px){ .price-grid{grid-template-columns:1fr} }
+/* finestra dashboard (colori fissi: è la riproduzione dell'app) */
+.mwin{background:#f3f4f6;color:#111827;border-radius:16px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.35);font-size:14px;line-height:1.45}
+.mbar{background:#fff;display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid #e5e7eb}
+.mbar .dot{width:24px;height:24px;border-radius:7px;background:var(--app);color:#fff;display:grid;place-items:center;font-size:13px;font-weight:800}
+.mbar b{font-size:14px}.mbar small{display:block;font-size:11px;color:#6b7280;font-weight:500;line-height:1.2}
+.mbar nav{margin-left:auto;display:flex;gap:4px;font-size:12px;font-weight:600}
+.mbar nav i{font-style:normal;padding:5px 9px;border-radius:8px;color:#374151}
+.mbar nav i.on{background:var(--app);color:#fff}
+@media (max-width:520px){.mbar nav i:not(.on){display:none}}
+.mbody{padding:12px;display:grid;gap:10px}
+.mcard{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:12px}
+.mcard h4{margin:0 0 8px;font-size:13.5px}
+.aibox{border:1.5px dashed #a78bfa;background:#f5f3ff}
+.aiin{background:#fff;border:1px solid #ddd6fe;border-radius:9px;padding:9px 11px;min-height:58px;font-size:13.5px;color:#111827}
+.aiin .ph{color:#9ca3af}
+.caret{display:inline-block;width:2px;height:1em;background:#7c3aed;vertical-align:-2px;animation:blink .8s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.aibtn{display:inline-block;margin-top:9px;background:var(--app);color:#fff;font-weight:700;font-size:12.5px;border-radius:9px;padding:7px 12px}
+.aibtn.pulse{animation:pulse 1s ease 2}
+@keyframes pulse{50%{transform:scale(1.06);box-shadow:0 0 0 6px rgba(240,162,98,.5)}}
+.mrow{display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px solid #eef0f3;font-size:13.5px}
+.mrow span small{display:block;color:#6b7280;font-size:11.5px}
+.mrow b{white-space:nowrap}
+.mrow.soft{color:#6b7280;border-bottom:0;padding:3px 0}
+.mrow.tot{font-weight:800;font-size:15.5px;border-bottom:0;border-top:2px solid #111827;margin-top:5px;padding-top:8px}
+.aitag.add{background:#ffedd5;color:#9a3412}
+.aitag{font-size:10.5px;font-weight:800;color:#6d28d9;background:#ede9fe;border-radius:999px;padding:2px 7px;margin-left:6px;white-space:nowrap}
+
+/* telefono */
+.phone{width:286px;max-width:100%;background:#0d1117;border-radius:40px;padding:11px;box-shadow:0 30px 70px rgba(0,0,0,.45);position:relative}
+.phone:before{content:"";position:absolute;top:19px;left:50%;width:84px;height:20px;margin-left:-42px;background:#0d1117;border-radius:12px;z-index:2}
+.scr{background:#efeae2;border-radius:30px;overflow:hidden;min-height:468px;padding:46px 10px 14px;display:flex;flex-direction:column;gap:9px;color:#1b1d22;font-size:13px;line-height:1.4}
+.wab{align-self:flex-end;max-width:92%;background:#d9fdd3;border-radius:14px 14px 4px 14px;padding:8px 11px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.wab.in{align-self:flex-start;background:#fff;border-radius:14px 14px 14px 4px;font-weight:600}
+.pdf{align-self:flex-end;width:92%;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,.14)}
+.pdf .ph{background:var(--app);color:#fff;display:flex;gap:9px;align-items:center;padding:10px 11px}
+.pdf .ph i{font-style:normal;width:30px;height:30px;border-radius:8px;background:#ffffff33;display:grid;place-items:center;font-weight:800;font-size:12px}
+.pdf .ph small{display:block;opacity:.85;font-size:10.5px}
+.pdf .pb{padding:9px 11px}
+.pdf .mrow{font-size:12px;padding:5px 0}
+.pdf .mrow.tot{font-size:13.5px}
+.pdf .pf{display:flex;justify-content:space-between;align-items:center;background:#f3f4f6;padding:7px 11px;font-size:11px;color:#4b5563;font-weight:600}
+.pdf .pf b{background:#dc2626;color:#fff;border-radius:4px;padding:1px 5px;font-size:10px}
+.accbtn{display:block;text-align:center;background:#128c4a;color:#fff;font-weight:800;font-size:12.5px;border-radius:9px;padding:9px;margin-top:9px}
+.accbtn.pulse{animation:pulse 1s ease 2}
+.pdfbtn{display:block;text-align:center;border:1px solid #d1d5db;font-weight:700;font-size:12px;border-radius:9px;padding:7px;margin-top:6px}
+.statepill{display:inline-block;background:#dcfce7;color:#166534;font-weight:800;font-size:12px;border-radius:999px;padding:5px 11px;margin-left:8px}
+.cap{display:flex;justify-content:space-between;gap:12px;margin-top:18px;font-size:13.5px;color:#cfe6e0;flex-wrap:wrap}
+
+/* sezioni */
+.sec{padding-block:56px 8px;display:grid;gap:18px}
+.sec h2{font-size:clamp(26px,3.8vw,36px);font-weight:800}
+.sec .lead{color:var(--ink-soft);max-width:62ch}
+.center{text-align:center;justify-items:center}
+.center .lead{margin-inline:auto}
+
+.power{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,4vw,48px);align-items:center;padding-block:26px}
+.power:nth-of-type(even) .pv{order:-1}
+@media (max-width:820px){.power{grid-template-columns:1fr}.power:nth-of-type(even) .pv{order:0}}
+.power h3{font-size:clamp(22px,3vw,28px);font-weight:800}
+.power p{color:var(--ink-soft);margin-top:10px}
+.power ul{margin:14px 0 0;padding:0;list-style:none;display:grid;gap:8px;font-size:15.5px}
+.power li{display:flex;gap:10px;align-items:flex-start}
+.power li svg,.plan li svg{width:18px;height:18px;flex-shrink:0;margin-top:4px;color:var(--brand)}
+:root[data-theme="dark"] .power li svg,:root[data-theme="dark"] .plan li svg{color:var(--accent)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .power li svg,:root:not([data-theme="light"]) .plan li svg{color:var(--accent)}}
+.badge{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:4px 11px;margin-bottom:12px;background:var(--chip);color:var(--ink)}
+.badge.ai{background:#ede9fe;color:#5b21b6}
+.pv{background:radial-gradient(120% 140% at 15% 0%,#12776a,var(--brand-deep) 70%);border-radius:24px;padding:clamp(16px,3vw,28px);min-width:0}
+.pv .mwin{box-shadow:0 18px 44px rgba(0,0,0,.3)}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips i{font-style:normal;font-size:12px;font-weight:700;border-radius:999px;padding:4px 10px;background:#e5e7eb;color:#374151}
+.chips i.s2{background:#dbeafe;color:#1e40af}.chips i.s3{background:#dcfce7;color:#166534}.chips i.s4{background:#fee2e2;color:#991b1b}
+.sharebtns{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}
+.sharebtns span{font-size:12.5px;font-weight:700;border-radius:9px;padding:8px 11px;border:1px solid #d1d5db;background:#fff}
+.sharebtns .wa{background:#16a34a;border-color:#16a34a;color:#fff}
+.swatches{display:flex;gap:8px;margin-top:8px}
+.swatches i{width:26px;height:26px;border-radius:8px;display:block}
+.swatches i.on{outline:3px solid #111827;outline-offset:2px}
+
+.feats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media (max-width:860px){.feats{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.feats{grid-template-columns:1fr}}
+.feat{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px;display:grid;gap:6px;align-content:start}
+.feat b{font-size:17px}
+.feat p{color:var(--ink-soft);font-size:15.5px}
+.feat .ic{width:40px;height:40px;border-radius:11px;background:var(--chip);display:grid;place-items:center;color:var(--brand)}
+:root[data-theme="dark"] .feat .ic{color:var(--accent)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .feat .ic{color:var(--accent)}}
+.feat .ic svg{width:22px;height:22px}
+.who{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.who span{background:var(--surface);border:1px solid var(--line);padding:9px 15px;border-radius:999px;font-weight:600;font-size:15px}
+
+.path{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:0;margin:0;list-style:none;counter-reset:p}
+@media (max-width:760px){.path{grid-template-columns:1fr}}
+.path li{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px;color:var(--ink-soft);font-size:15.5px;counter-increment:p}
+.path li::before{content:counter(p);display:grid;place-items:center;width:32px;height:32px;border-radius:10px;background:var(--accent);color:var(--accent-ink);font-weight:800;margin-bottom:10px}
+.path b{display:block;color:var(--ink);font-size:17px;margin-bottom:2px}
+
+/* prezzi */
+.price-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;max-width:900px;margin:0 auto;width:100%}
+@media (max-width:760px){.price-grid{grid-template-columns:1fr}}
 .plan{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:30px 28px;display:flex;flex-direction:column;gap:16px;position:relative}
 .plan.best{border:2px solid var(--accent)}
 .plan .tag{position:absolute;top:-13px;left:28px;background:var(--accent);color:var(--accent-ink);font-weight:800;font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:999px}
-.plan h3{font-size:22px;margin:0}
-.plan .for{color:var(--ink-soft);margin:0;font-size:15px}
-.plan .amount{font-size:46px;font-weight:800;line-height:1;margin:6px 0 0}
+.plan h3{font-size:22px}
+.plan .for{color:var(--ink-soft);font-size:15px}
+.plan .amount{font-size:46px;font-weight:800;line-height:1;margin-top:6px}
 .plan .amount small{font-size:16px;font-weight:600;color:var(--ink-soft)}
-.plan .setup{background:var(--chip);border-radius:12px;padding:10px 14px;font-size:14.5px;margin:0}
+.plan .setup{background:var(--chip);border-radius:12px;padding:10px 14px;font-size:14.5px}
 .plan ul{list-style:none;padding:0;margin:0;display:grid;gap:10px;font-size:15.5px}
 .plan li{display:flex;gap:10px;align-items:flex-start}
-.plan li svg{width:18px;height:18px;flex-shrink:0;margin-top:3px;color:var(--brand)}
-:root[data-theme="dark"] .plan li svg{color:var(--accent)}
-@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .plan li svg{color:var(--accent)} }
-.plan .btn{justify-content:center;margin-top:auto}
-.plan .btn-line{border-color:var(--line);color:var(--ink)}
-.extras{max-width:900px;margin:26px auto 0;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:22px 26px}
-.extras h3{margin:0 0 10px;font-size:17px}
-.extras ul{margin:0;padding-left:18px;display:grid;gap:6px;font-size:15px;color:var(--ink-soft)}
-.price-note{max-width:900px;margin:18px auto 0;text-align:center;color:var(--ink-soft);font-size:14.5px}
-.trial{max-width:900px;margin:0 auto 34px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;background:var(--brand-deep);color:#fff;border-radius:20px;padding:20px 26px}
-.trial b{font-size:18px}.trial span{color:#cfe3dd;font-size:15px;display:block;margin-top:4px}
-
-.bill{display:flex;justify-content:center;margin:0 auto 26px}
+.plan .btn{margin-top:auto}
+.price-note{text-align:center;color:var(--ink-soft);font-size:14.5px}
+.bill{display:flex;justify-content:center}
 .bill div{display:inline-flex;background:var(--chip);border-radius:999px;padding:4px;gap:4px}
 .bill button{border:0;background:transparent;color:var(--ink);font:inherit;font-weight:700;font-size:15px;padding:9px 18px;border-radius:999px;cursor:pointer}
 .bill button[aria-pressed="true"]{background:var(--brand);color:#fff}
@@ -247,179 +219,388 @@ footer a:hover{text-decoration:underline}
 .bill button[aria-pressed="true"] small{color:#ffd9b8}
 [data-bill="m"] .py{display:none}
 [data-bill="y"] .pm{display:none}
+
+.faq{display:grid;gap:10px;max-width:760px;width:100%;margin:0 auto}
+.faq details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px 18px}
+.faq summary{cursor:pointer;font-weight:700;padding:14px 0;list-style:none;display:flex;justify-content:space-between;gap:14px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:22px;line-height:1;color:var(--accent-deep);flex-shrink:0}
+.faq details[open] summary::after{content:"–"}
+.faq p{color:var(--ink-soft);padding-bottom:16px;font-size:15.5px}
+
+.cta{background:radial-gradient(100% 120% at 80% 0%,#12776a,var(--brand-deep) 70%);color:#fff;border-radius:24px;padding:clamp(26px,5vw,44px);display:grid;gap:14px;margin-block:56px 10px}
+.cta p{color:var(--hero-soft);max-width:60ch}
+.cta .actions{display:flex;flex-wrap:wrap;gap:10px}
+footer{padding-block:28px 44px;color:var(--ink-soft);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;align-items:center}
+footer a{text-decoration:none;font-weight:600}
+footer a:hover{text-decoration:underline}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.caret{animation:none}}
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Preventivo Smart di Assistify","serviceType":"Software per preventivi personalizzato con il tuo marchio","provider":{"@type":"Organization","name":"Assistify Tech","url":"https://assistifyitalia.it/"},"areaServed":{"@type":"Country","name":"Italia"},"url":"https://assistifyitalia.it/preventivatore.html","description":"Preventivatore con il tuo logo: domande al cliente su WhatsApp, calcolo di costi e margini, preventivo pronto da inviare e salvare in PDF."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Preventivo Smart di Assistify","serviceType":"Software online per preventivi con il tuo marchio","provider":{"@type":"Organization","name":"Assistify Tech","url":"https://assistifyitalia.it/"},"areaServed":{"@type":"Country","name":"Italia"},"url":"https://assistifyitalia.it/preventivatore.html","description":"Dashboard online per preventivi con il tuo logo: listino servizi, totali automatici, PDF e invio su WhatsApp o email. Nel piano Plus l'intelligenza artificiale compila il preventivo da un messaggio."}</script>
 </head>
 <body>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <defs>
-    <linearGradient id="og" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f3ad6f"/><stop offset="1" stop-color="#e0773a"/></linearGradient>
-    <symbol id="mark" viewBox="0 0 64 64"><rect width="64" height="64" rx="18" fill="url(#og)"/><g fill="none" stroke="#062e29" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M51 34a17 17 0 0 1-24.9 15.1L14 52l3.3-10.8A17 17 0 1 1 51 34z"/><path d="M26.5 34.5l4.8 4.8 9.4-9.4"/></g><rect x="25" y="10" width="4.4" height="10" rx="2.2" fill="#062e29"/><rect x="36" y="10" width="4.4" height="10" rx="2.2" fill="#062e29"/></symbol>
-    <symbol id="i-wa" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.4A8.4 8.4 0 1 1 21 11.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
-  </defs>
+<defs>
+<linearGradient id="og" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f3ad6f"/><stop offset="1" stop-color="#e0773a"/></linearGradient>
+<symbol id="mark" viewBox="0 0 64 64"><rect width="64" height="64" rx="18" fill="url(#og)"/><g fill="none" stroke="#062e29" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M51 34a17 17 0 0 1-24.9 15.1L14 52l3.3-10.8A17 17 0 1 1 51 34z"/><path d="M26.5 34.5l4.8 4.8 9.4-9.4"/></g><rect x="25" y="10" width="4.4" height="10" rx="2.2" fill="#062e29"/><rect x="36" y="10" width="4.4" height="10" rx="2.2" fill="#062e29"/></symbol>
+<symbol id="ck" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</defs>
 </svg>
 
 <header class="top">
-  <div class="wrap">
-    <a class="logo" href="./" aria-label="Assistify, vai alla home"><svg><use href="#mark"/></svg>Assistify</a>
-    <nav class="nav" aria-label="Menu principale">
-      <a href="./">Chatbot WhatsApp</a>
-      <a href="preventivatore.html" aria-current="page">Preventivo Smart</a>
-      <a href="#prezzi">Prezzi</a>
-      <a href="./#faq">Domande</a>
-      <a class="btn btn-accent" href="questionario.html?prodotto=preventivi">Richiedi una demo</a>
-      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Apri il menu"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
-    </nav>
-  </div>
-  <div class="mnav" id="mnav" hidden>
-    <a href="./">Chatbot WhatsApp<small>Prenotazioni automatiche su WhatsApp</small></a>
-    <a href="preventivatore.html">Preventivo Smart<small>Preventivi con il tuo logo, su misura per il tuo settore</small></a>
-    <a href="questionario.html?prodotto=preventivi">Richiedi una demo<small>Compila il questionario</small></a>
-    <a href="./#faq">Domande frequenti</a>
-  </div>
+<div class="wrap">
+<a class="logo" href="./" aria-label="Assistify, vai alla home"><svg><use href="#mark"/></svg>Assistify</a>
+<nav class="nav" aria-label="Menu principale">
+<a href="./">Chatbot WhatsApp</a>
+<a href="preventivatore.html" aria-current="page">Preventivo Smart</a>
+<a href="#prezzi">Prezzi</a>
+<a href="#faq">Domande</a>
+<a class="btn btn-accent" href="questionario.html?prodotto=preventivi">Richiedi una demo</a>
+<button class="menu-btn" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Apri il menu"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</nav>
+</div>
+<div class="mnav" id="mnav" hidden>
+<a href="./">Chatbot WhatsApp<small>Prenotazioni automatiche su WhatsApp</small></a>
+<a href="#come-funziona">Preventivo Smart<small>Guarda come funziona</small></a>
+<a href="#prezzi">Prezzi<small>Smart e Smart Plus con AI</small></a>
+<a href="questionario.html?prodotto=preventivi">Richiedi una demo<small>Compila il questionario</small></a>
+<a href="#faq">Domande frequenti</a>
+</div>
 </header>
 
 <main>
-  <section class="hero">
-    <div class="wrap">
-      <p class="eyebrow">Preventivo Smart · di Assistify</p>
-      <h1>Preventivi con il tuo marchio, pronti in un minuto.</h1>
-      <p class="lead">Preventivo Smart è il programma per fare preventivi che prepariamo su misura per il tuo settore, con il tuo logo: scegli i servizi, vedi subito quanto guadagni e mandi al cliente un preventivo curato, da accettare su WhatsApp.</p>
-      <div class="ctas">
-        <a class="btn btn-accent" href="questionario.html?prodotto=preventivi">Richiedi la demo gratuita</a>
-        <a class="btn btn-ghost" href="#come-funziona">Guarda come funziona</a>
-      </div>
-    </div>
-  </section>
+<section class="hero" id="come-funziona">
+<div class="wrap">
+<p class="eyebrow">Preventivo Smart · di Assistify</p>
+<h1>Dal messaggio del cliente al preventivo, <em>in un minuto.</em></h1>
+<p class="lead">Preventivo Smart è la tua pagina online per fare preventivi con il tuo logo: scegli le voci dal tuo listino, i totali si calcolano da soli e il cliente lo riceve su WhatsApp o per email e lo <b style="color:#fff">accetta con un tocco</b>. Con il piano Plus lo compila e lo invia l'intelligenza artificiale: tu controlli.</p>
+<div class="ctas">
+<a class="btn btn-accent" href="questionario.html?prodotto=preventivi">Richiedi la demo gratuita</a>
+<a class="btn btn-ghost" href="#prezzi">Vedi i prezzi</a>
+</div>
+<ul class="trust"><li>7 giorni di prova gratuita</li><li>Già pronto con il tuo logo e i tuoi servizi</li><li>Da computer e da telefono, senza installare nulla</li></ul>
 
-  <div class="wrap">
+<div class="stage">
+<div class="asteps" id="asteps">
+<div><b>1</b>Scrivi la richiesta</div>
+<div><b>2</b>L'AI compila il preventivo</div>
+<div><b>3</b>«Mandalo a Mario»: parte su WhatsApp</div>
+<div><b>4</b>Il cliente accetta con un tocco</div>
+</div>
+<div class="mock anim" id="anim" role="img" aria-label="Animazione di esempio: la richiesta del cliente viene trasformata dall'intelligenza artificiale in un preventivo, inviato su WhatsApp con un comando; il cliente lo apre e lo accetta con un tocco">
+<div class="mwin">
+<div class="mbar"><span class="dot">✓</span><div><b>Preventivo Smart</b><small>Idraulica Rossi · Plus</small></div><nav><i class="on">Preventivi</i><i>Servizi</i><i>Impostazioni</i></nav></div>
+<div class="mbody">
+<div class="mcard aibox">
+<h4>✨ Crea con l'AI</h4>
+<div class="aiin"><span id="typed" class="ph">Descrivi il lavoro richiesto dal cliente</span><span class="caret" id="caret" hidden></span></div>
+<span class="aibtn" id="aibtn">Genera voci e testo</span>
+</div>
+<div class="mcard">
+<h4>Voci del preventivo</h4>
+<div class="mrow a" data-s="2"><span>Sostituzione rubinetto<small>2 pz × 45,50 €</small></span><b>91,00 €</b></div>
+<div class="mrow a" data-s="2"><span>Manodopera<small>1,5 ore × 30,00 €</small></span><b>45,00 €</b></div>
+<div class="mrow soft a" data-s="2"><span>Sconto 10%</span><b>− 13,60 €</b></div>
+<div class="mrow soft a" data-s="2"><span>IVA 22%</span><b>26,93 €</b></div>
+<div class="mrow tot a" data-s="2"><span>Totale</span><b>149,33 €</b></div>
+</div>
+<div class="mcard aibox a" data-s="3"><h4>✨ Dillo all'AI</h4><div class="aiin" style="min-height:0">mandalo su WhatsApp a Mario Bianchi</div><span class="aibtn" style="margin-top:8px">Esegui</span> <span class="statepill a" data-s="5">Stato: accettato ✅</span></div>
+</div>
+</div>
+<div class="phone"><div class="scr">
+<span class="wab in a" data-s="3">Buongiorno Mario, le invio il preventivo di Idraulica Rossi. Può vederlo e accettarlo qui 👇</span>
+<div class="pdf a" data-s="3" style="align-self:flex-start">
+<div class="ph"><i>IR</i><div><b>Idraulica Rossi</b><small>Preventivo n. 2026/001</small></div></div>
+<div class="pb">
+<div class="mrow"><span>Sostituzione rubinetto</span><b>91,00 €</b></div>
+<div class="mrow"><span>Manodopera</span><b>45,00 €</b></div>
+<div class="mrow tot"><span>Totale</span><b>149,33 €</b></div>
+<span class="accbtn" id="accbtn">✅ Accetta su WhatsApp</span>
+<span class="pdfbtn">Scarica il PDF</span>
+</div>
+</div>
+<span class="wab a" data-s="5">Buongiorno, accetto il preventivo n. 2026/001 di 149,33 €.</span>
+</div></div>
+</div>
+<div class="cap"><span>👈 Quello che fai tu nella tua dashboard</span><span>Quello che vede il tuo cliente su WhatsApp 👉</span></div>
+</div>
+</div>
+</section>
 
-    <section class="sec" id="come-funziona">
-      <h2>Guarda come funziona</h2>
-      <p class="lead">Dal calcolo al sì del cliente in quattro passi. Nell'esempio c'è il nostro logo: al suo posto ci sarà il tuo.</p>
-      <div class="stage">
-      <div class="asteps" id="asteps">
-        <div><b>1</b>Scegli servizi ed extra</div>
-        <div><b>2</b>Vedi prezzo e guadagno</div>
-        <div><b>3</b>Nasce il preventivo con il tuo logo</div>
-        <div><b>4</b>Il cliente accetta su WhatsApp</div>
-      </div>
-      <div class="mock anim" id="anim" aria-label="Animazione di esempio: dal calcolo al preventivo accettato">
-        <div class="mwin">
-          <div class="mbar"><span></span><span></span><span></span><svg><use href="#mark"/></svg><em>Preventivo Smart · Assistify</em><i class="yourlogo" style="font-style:normal">qui il tuo logo</i></div>
-          <div class="mbody">
-            <div class="mtabs"><i>Cliente</i><i class="on">Preventivo</i><i>Documento</i><i>Costi</i></div>
-            <div class="mrow a " data-s="1"><span>Giornata intera · Matrimonio</span><b>1.800 €</b></div>
-            <div class="mrow a " data-s="1"><span>Secondo fotografo</span><b>350 €</b></div>
-            <div class="mrow a " data-s="1"><span>Album 30x30</span><b>400 €</b></div>
-            <div class="mrow a " data-s="1"><span>Trasferta 40 km</span><b>20 €</b></div>
-            <div class="mrow a tot" data-s="2"><span>Totale cliente</span><b>2.570 €</b></div>
-            <div class="mrow a soft" data-s="2"><span>Costi vivi + spese fisse</span><b>644 €</b></div>
-            <div class="mrow a good" data-s="2"><span>Ti resta</span><b>1.926 €</b></div>
-          </div>
-        </div>
-        <div class="phone2"><div class="scr"><span class="wab a" data-s="3">Ciao Giulia, ecco il tuo preventivo 👇</span><div class="mdoc a" data-s="3">
-          <div class="mhead"><span class="mlogo"><svg><use href="#mark"/></svg></span><div><b>Assistify</b><small>Il tuo nome, il tuo logo, i tuoi colori</small></div></div>
-          <div class="mdb">
-            <b class="mt">Matrimonio</b><small>Preparato per Giulia e Andrea</small>
-            <div class="mrow"><span>Giornata intera</span><b>1.800 €</b></div>
-            <div class="mrow"><span>Secondo fotografo</span><b>350 €</b></div>
-            <div class="mrow"><span>Album 30x30</span><b>400 €</b></div>
-            <div class="mrow tot gold"><span>Totale</span><b>2.570 €</b></div>
-            <div class="mbtns"><span class="mb1" id="accbtn">Accetta su WhatsApp</span><span class="mb2">Salva PDF</span></div>
-          </div>
-        </div><span class="wab me a" data-s="4">Perfetto, accetto! 🎉</span><span class="accepted a" data-s="4">✅ Accettato dal cliente</span></div></div>
-      </div>
-      <div class="cap"><span>👈 Quello che vedi tu: prezzi, costi e guadagno</span><span>Quello che riceve il cliente sul telefono 👉</span></div>
-      </div>
-    </section>
+<div class="wrap">
 
-    <section class="sec">
-      <h2>Personalizzato per il tuo settore</h2>
-      <p class="lead">Non è un programma uguale per tutti. Lo prepariamo noi sul tuo lavoro: il tuo logo e i tuoi colori, i servizi e i pacchetti del tuo settore, le domande giuste da fare al cliente. Tu lo apri ed è già pronto.</p>
-      <div class="sectors">
-        <div class="sdoc"><div class="sh" style="background:#1f2430"><i>LS</i><div><b>Lumen Studio</b><small>Fotografo</small></div></div><div class="sb"><div class="mrow"><span>Servizio matrimonio</span><b>1.800 €</b></div><div class="mrow"><span>Album 30x30</span><b>400 €</b></div><p>Domande al cliente: data, luogo, numero di invitati.</p></div></div>
-        <div class="sdoc"><div class="sh" style="background:#a8456b"><i>BE</i><div><b>Bellezza Estetica</b><small>Centro estetico</small></div></div><div class="sb"><div class="mrow"><span>Pacchetto sposa</span><b>320 €</b></div><div class="mrow"><span>Trattamento viso x5</span><b>250 €</b></div><p>Domande al cliente: tipo di pelle, data dell'evento.</p></div></div>
-        <div class="sdoc"><div class="sh" style="background:#1f5f8b"><i>TI</i><div><b>Termo Impianti</b><small>Artigiano e installatore</small></div></div><div class="sb"><div class="mrow"><span>Climatizzatore + posa</span><b>1.250 €</b></div><div class="mrow"><span>Sopralluogo</span><b>40 €</b></div><p>Domande al cliente: metri quadri, piano, foto del locale.</p></div></div>
-      </div>
-    </section>
+<section class="sec center">
+<p class="eyebrow">Cosa fa per te</p>
+<h2>Meno tempo sui preventivi, più tempo sul lavoro.</h2>
+<p class="lead">Niente più fogli Excel e messaggi scritti a mano. Una sola pagina, già pronta con il tuo marchio, che fa i conti e prepara il documento al posto tuo.</p>
+</section>
 
-    <section class="sec">
-      <h2>Cosa fa</h2>
-      <div class="feats">
-<div class="feat"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18M3 12h18"/></svg></span><b>Con il tuo marchio</b><p>Nome, logo, colori e contatti tuoi. Il cliente riceve un preventivo che sembra fatto da un grafico, in un minuto.</p></div>
-<div class="feat"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg></span><b>I tuoi servizi e pacchetti</b><p>Inserisci servizi, pacchetti ed extra con i tuoi prezzi. Li cambi quando vuoi, senza chiedere a nessuno.</p></div>
-<div class="feat"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg></span><b>Domande al cliente su WhatsApp</b><p>Mandi le domande giuste per ogni servizio; il cliente risponde quando vuole e la scheda si compila da sola.</p></div>
-<div class="feat"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg></span><b>Sai quanto guadagni davvero</b><p>Registra i tuoi costi: per ogni preventivo vedi costi vivi, quota di spese fisse e il margine che ti resta.</p></div>
-<div class="feat"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></span><b>Preventivo pronto da inviare</b><p>Una pagina con il tuo marchio che il cliente apre dal telefono, accetta su WhatsApp o salva in PDF.</p></div>
-<div class="feat"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span><b>Sempre con te</b><p>Entri con le tue credenziali da computer o telefono. I tuoi prezzi, clienti e costi li vedi solo tu, con copie di sicurezza automatiche.</p></div>
-      </div>
-    </section>
+<section aria-label="Funzioni principali">
 
-    <section class="sec">
-      <h2>Per chi è pensato</h2>
-      <p class="lead">Per chi fa preventivi diversi per ogni cliente e oggi li scrive a mano o su un foglio Excel.</p>
-      <div class="who"><span>Fotografi e videomaker</span><span>Wedding planner</span><span>Artigiani e installatori</span><span>Centri estetici</span><span>Consulenti</span><span>Organizzatori di eventi</span><span>Studi e professionisti</span></div>
-    </section>
+<div class="power reveal">
+<div>
+<span class="badge ai">Smart Plus · con AI</span>
+<h3>Scrivi cosa serve al cliente. Al preventivo pensa l'AI.</h3>
+<p>Incolli il messaggio del cliente o descrivi il lavoro in due righe. L'intelligenza artificiale conosce il tuo settore: sceglie le voci dal tuo listino, aggiunge quelle che mancano e scrive il testo di presentazione.</p>
+<ul>
+<li><svg><use href="#ck"/></svg><span>Per le voci del listino usa <b>i tuoi prezzi esatti</b></span></li>
+<li><svg><use href="#ck"/></svg><span><b>Aggiunge da sola le voci che mancano</b> con un prezzo indicativo, segnato «da verificare»</span></li>
+<li><svg><use href="#ck"/></svg><span><b>Confronto con i prezzi medi in Italia</b>: al mq, al pezzo, all'ora ti dice se sei sotto, in linea o sopra</span></li>
+<li><svg><use href="#ck"/></svg><span>Prima di inviare controlli e correggi tutto quello che vuoi</span></li>
+</ul>
+</div>
+<div class="pv"><div class="mwin"><div class="mbody">
+<div class="mcard aibox"><h4>✨ Crea con l'AI</h4><div class="aiin">Il sig. Bianchi vuole rifare il bagno: demolizione, nuovo impianto, piastrelle 12 mq e sanitari</div><span class="aibtn">Genera voci e testo</span></div>
+<div class="mcard"><h4>Voci del preventivo</h4>
+<div class="mrow"><span>Demolizione bagno<span class="aitag">dal listino</span></span><b>480,00 €</b></div>
+<div class="mrow"><span>Impianto idraulico bagno<span class="aitag">dal listino</span></span><b>1.350,00 €</b></div>
+<div class="mrow"><span>Posa piastrelle<span class="aitag">dal listino</span><small>12 mq × 38,00 €</small></span><b>456,00 €</b></div>
+<div class="mrow"><span>Smaltimento macerie<span class="aitag add">aggiunta dall'AI</span><small>prezzo indicativo, da verificare</small></span><b>180,00 €</b></div>
+</div>
+<div class="mcard"><h4>Confronto con i prezzi medi in Italia</h4>
+<div class="mrow"><span>Posa piastrelle<small>media 25 € – 40 € / mq · il tuo 38 €</small></span><span class="chips"><i class="s3">in linea</i></span></div>
+<div class="mrow" style="border-bottom:0"><span>Demolizione bagno<small>media 500 € – 900 € · il tuo 480 €</small></span><span class="chips"><i class="s2">sotto la media</i></span></div>
+</div>
+</div></div></div>
+</div>
 
-    <section class="sec">
-      <h2>Come funziona</h2>
-      <ol class="path steps4" style="margin-top:0">
-        <li style="background:var(--surface);border-color:var(--line);color:var(--ink-soft)"><b style="color:var(--ink)">Richiedi la demo</b>Compili la richiesta con logo e servizi, oppure ci scrivi su WhatsApp.</li>
-        <li style="background:var(--surface);border-color:var(--line);color:var(--ink-soft)"><b style="color:var(--ink)">La prepariamo per te</b>Con il tuo marchio, le tue domande e i tuoi prezzi già inseriti.</li>
-        <li style="background:var(--surface);border-color:var(--line);color:var(--ink-soft)"><b style="color:var(--ink)">7 giorni gratis</b>Usi il programma con i tuoi clienti veri, senza impegno.</li>
-        <li style="background:var(--surface);border-color:var(--line);color:var(--ink-soft)"><b style="color:var(--ink)">Continui con un abbonamento</b>Da 19 € al mese o 190 € l'anno, con aggiornamenti e assistenza inclusi.</li>
-      </ol>
-    </section>
+<div class="power reveal">
+<div>
+<span class="badge ai">Smart Plus · con AI</span>
+<h3>«Mandalo su WhatsApp a Mario». Fatto.</h3>
+<p>Non devi cercare numeri né scrivere messaggi. Dici all'AI a chi mandare il preventivo e come: lei trova il cliente, prepara il messaggio e apre l'invio.</p>
+<ul>
+<li><svg><use href="#ck"/></svg><span>Trova il cliente <b>per nome</b> tra quelli a cui hai già fatto un preventivo</span></li>
+<li><svg><use href="#ck"/></svg><span>Oppure indichi tu un numero o un indirizzo email</span></li>
+<li><svg><use href="#ck"/></svg><span>Scrive il messaggio di accompagnamento, anche con il tono che chiedi</span></li>
+<li><svg><use href="#ck"/></svg><span>Su WhatsApp si apre la chat con tutto pronto: tocchi Invia</span></li>
+</ul>
+</div>
+<div class="pv"><div class="mwin"><div class="mbody">
+<div class="mcard aibox"><h4>✨ Dillo all'AI</h4><div class="aiin" style="min-height:0">mandalo su WhatsApp a Mario Bianchi con un messaggio cordiale</div><span class="aibtn">Esegui</span></div>
+<div class="mcard"><h4>Messaggio di accompagnamento</h4><div class="aiin" style="min-height:0">Buongiorno Mario, le invio il preventivo per la sostituzione dei rubinetti. Resto a disposizione per qualsiasi chiarimento.</div>
+<div class="sharebtns"><span class="wa">WhatsApp · Mario Bianchi · 333 123 4567</span></div></div>
+</div></div></div>
+</div>
 
-    <section class="sec" id="prezzi" data-bill="m">
-      <h2>Prezzi</h2>
-      <p class="lead">Solo abbonamento, senza costi di attivazione: la personalizzazione con il tuo logo e i tuoi servizi è inclusa.</p>
-      <div class="bill"><div role="group" aria-label="Scegli la fatturazione"><button type="button" data-v="m" aria-pressed="true">Mensile</button><button type="button" data-v="y" aria-pressed="false">Annuale<small>risparmi</small></button></div></div>
-      <div class="price-grid">
-        <div class="plan">
-          <h3>Smart</h3>
-          <p class="for">Per fare preventivi curati in un minuto.</p>
-          <p class="amount pm">19 €<small> / mese</small></p><p class="amount py">190 €<small> / anno</small></p>
-          <p class="setup pm">Durata minima 3 mesi, poi disdici quando vuoi.</p><p class="setup py"><b>2 mesi gratis</b>: un solo pagamento all'anno (equivale a 15,80 € al mese).</p>
-          <ul><li><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Accesso online con le tue credenziali, da computer e telefono</span></li><li><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Il tuo logo, i tuoi colori, i servizi del tuo settore</span></li><li><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Preventivi illimitati</span></li><li><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Prezzo, costi e guadagno su ogni preventivo</span></li><li><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>PDF e invio al cliente su WhatsApp</span></li><li><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Aggiornamenti e assistenza inclusi</span></li></ul>
-          <a class="btn btn-ghost btn-line" href="https://wa.me/393297286904?text=Ciao%2C%20vorrei%20provare%20gratis%20Preventivo%20Smart%20per%20la%20mia%20attivit%C3%A0" target="_blank" rel="noopener">Prova Smart gratis</a>
-        </div>
-        <div class="plan best">
-          <span class="tag">Con intelligenza artificiale</span>
-          <h3>Smart Plus</h3>
-          <p class="for">L'AI prepara il preventivo al posto tuo.</p>
-          <p class="amount pm">29 €<small> / mese</small></p><p class="amount py">290 €<small> / anno</small></p>
-          <p class="setup pm">Durata minima 3 mesi, poi disdici quando vuoi.</p><p class="setup py"><b>2 mesi gratis</b>: un solo pagamento all'anno (equivale a 24,20 € al mese).</p>
-          <ul><li><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Tutto quello di Smart</span></li><li><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Preventivo da un messaggio</b>: incolli la richiesta del cliente e l'AI compila servizi ed extra</span></li><li><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Testo di accompagnamento</b> scritto dall'AI nel tuo tono</span></li><li><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Fino a 200 operazioni AI al mese</span></li><li><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Assistenza prioritaria su WhatsApp</span></li></ul>
-          <a class="btn btn-accent" href="https://wa.me/393297286904?text=Ciao%2C%20vorrei%20provare%20gratis%20Preventivo%20Smart%20per%20la%20mia%20attivit%C3%A0" target="_blank" rel="noopener">Prova Smart Plus gratis</a>
-        </div>
-      </div>
-      <p class="price-note">7 giorni di prova gratuita con il tuo marchio.</p>
-    </section>
+<div class="power reveal">
+<div>
+<span class="badge">Accettazione</span>
+<h3>Il cliente accetta su WhatsApp, con un tocco.</h3>
+<p>Il cliente riceve un link: vede il preventivo con il tuo logo sul telefono, senza scaricare nulla, e può dire sì subito.</p>
+<ul>
+<li><svg><use href="#ck"/></svg><span>Pulsante <b>Accetta su WhatsApp</b>: ti arriva il messaggio di conferma</span></li>
+<li><svg><use href="#ck"/></svg><span>Nella tua dashboard lo stato diventa <b>accettato</b> da solo, con data e ora</span></li>
+<li><svg><use href="#ck"/></svg><span>Può anche scaricare il PDF o farti una domanda</span></li>
+<li><svg><use href="#ck"/></svg><span>Dopo la scadenza il preventivo non è più accettabile</span></li>
+</ul>
+</div>
+<div class="pv" style="display:grid;place-items:center"><div class="phone" style="width:270px"><div class="scr" style="min-height:0;background:#f3f4f6">
+<div class="pdf" style="width:100%">
+<div class="ph"><i>IR</i><div><b>Idraulica Rossi</b><small>Preventivo n. 2026/001</small></div></div>
+<div class="pb"><b style="font-size:13.5px">Per Mario Bianchi</b>
+<div class="mrow"><span>Sostituzione rubinetto</span><b>91,00 €</b></div>
+<div class="mrow"><span>Manodopera</span><b>45,00 €</b></div>
+<div class="mrow tot"><span>Totale</span><b>149,33 €</b></div>
+<span class="accbtn">✅ Accetta su WhatsApp</span><span class="pdfbtn">Scarica il PDF</span><span class="pdfbtn">Fai una domanda su WhatsApp</span></div>
+</div></div></div></div>
+</div>
 
-    <section class="cta">
-      <h2 style="font-size:clamp(24px,3.6vw,32px)">Vuoi vederlo con i tuoi servizi?</h2>
-      <p>Compila la richiesta con logo e servizi, oppure scrivici: prepariamo la tua demo gratuita di 7 giorni con il tuo marchio. Poi, se ti piace, continui con un abbonamento mensile o annuale.</p>
-      <div class="actions">
-        <a class="btn btn-accent" href="questionario.html?prodotto=preventivi">Compila la richiesta</a>
-        <a class="btn btn-ghost" href="https://wa.me/393297286904?text=Ciao%2C%20vorrei%20la%20demo%20gratuita%20di%207%20giorni%20di%20Preventivi%20con%20Assistify%20per%20la%20mia%20attivit%C3%A0" target="_blank" rel="noopener">Scrivici su WhatsApp</a>
-      </div>
-    </section>
-  </div>
+<div class="power reveal">
+<div>
+<span class="badge">Listino e totali</span>
+<h3>Il tuo listino, i conti sempre giusti.</h3>
+<p>Inserisci una volta servizi, unità di misura e prezzi. Quando fai un preventivo scegli le voci, metti le quantità e il programma calcola tutto.</p>
+<ul>
+<li><svg><use href="#ck"/></svg><span>Subtotale, <b>sconto</b>, <b>IVA</b> e totale calcolati da soli</span></li>
+<li><svg><use href="#ck"/></svg><span>Voci libere quando serve qualcosa fuori listino</span></li>
+<li><svg><use href="#ck"/></svg><span>Note, condizioni e giorni di validità già impostati</span></li>
+<li><svg><use href="#ck"/></svg><span>Modifichi listino e prezzi quando vuoi, da solo</span></li>
+</ul>
+</div>
+<div class="pv"><div class="mwin"><div class="mbody"><div class="mcard"><h4>Servizi e listino</h4>
+<div class="mrow"><span>Sostituzione rubinetto<small>al pezzo</small></span><b>45,50 €</b></div>
+<div class="mrow"><span>Manodopera<small>all'ora</small></span><b>30,00 €</b></div>
+<div class="mrow"><span>Posa piastrelle<small>al mq</small></span><b>38,00 €</b></div>
+<div class="mrow"><span>Uscita e sopralluogo<small>a corpo</small></span><b>40,00 €</b></div>
+</div>
+<div class="mcard"><div class="mrow soft"><span>Subtotale</span><b>136,00 €</b></div><div class="mrow soft"><span>Sconto 10%</span><b>− 13,60 €</b></div><div class="mrow soft"><span>IVA 22%</span><b>26,93 €</b></div><div class="mrow tot"><span>Totale</span><b>149,33 €</b></div></div>
+</div></div></div>
+</div>
+
+<div class="power reveal">
+<div>
+<span class="badge">PDF e invio</span>
+<h3>Un preventivo che fa bella figura, con il tuo logo.</h3>
+<p>Ogni preventivo diventa un PDF ordinato con logo, dati dell'attività e il tuo colore. Lo mandi come preferisci, senza uscire dalla pagina.</p>
+<ul>
+<li><svg><use href="#ck"/></svg><span><b>Invia su WhatsApp</b> o per email con il messaggio già scritto</span></li>
+<li><svg><use href="#ck"/></svg><span>Scarichi o stampi il PDF, oppure condividi il file dove vuoi</span></li>
+<li><svg><use href="#ck"/></svg><span>Il cliente lo apre dal telefono con un link e lo accetta</span></li>
+<li><svg><use href="#ck"/></svg><span>Numerazione automatica: 2026/001, 2026/002…</span></li>
+</ul>
+</div>
+<div class="pv"><div class="mwin"><div class="mbody">
+<div class="mcard"><h4>Logo e colore dei PDF</h4><div class="swatches"><i style="background:#0f766e" class="on"></i><i style="background:#1f2430"></i><i style="background:#a8456b"></i><i style="background:#1f5f8b"></i><i style="background:#b45309"></i></div></div>
+<div class="mcard"><h4>PDF e invio</h4><div class="aiin" style="min-height:0">Buongiorno, le invio il preventivo di Idraulica Rossi. Resto a disposizione per qualsiasi chiarimento.</div>
+<div class="sharebtns"><span>Apri / stampa PDF</span><span>Scarica PDF</span><span>Condividi il file</span><span class="wa">Invia su WhatsApp</span><span>Invia per email</span></div></div>
+</div></div></div>
+</div>
+
+<div class="power reveal">
+<div>
+<span class="badge">Archivio</span>
+<h3>Sai sempre a che punto è ogni preventivo.</h3>
+<p>Tutti i preventivi in un elenco, con cliente, data e importo. Segni quelli inviati, accettati o rifiutati e ritrovi tutto in un attimo.</p>
+<ul>
+<li><svg><use href="#ck"/></svg><span>Stati: bozza, inviato, accettato, rifiutato. «Accettato» scatta da solo quando il cliente dice sì</span></li>
+<li><svg><use href="#ck"/></svg><span><b>Duplica</b> un preventivo simile invece di rifarlo da capo</span></li>
+<li><svg><use href="#ck"/></svg><span>Accesso con le tue credenziali: i tuoi dati li vedi solo tu</span></li>
+</ul>
+</div>
+<div class="pv"><div class="mwin"><div class="mbody"><div class="mcard"><h4>Preventivi</h4>
+<div class="mrow"><span>2026/004 · Mario Bianchi<small>149,33 €</small></span><span class="chips"><i class="s3">accettato</i></span></div>
+<div class="mrow"><span>2026/003 · Condominio Verdi<small>2.286,00 €</small></span><span class="chips"><i class="s2">inviato</i></span></div>
+<div class="mrow"><span>2026/002 · Bar Centrale<small>640,00 €</small></span><span class="chips"><i class="s4">rifiutato</i></span></div>
+<div class="mrow" style="border-bottom:0"><span>2026/001 · Laura Neri<small>312,50 €</small></span><span class="chips"><i>bozza</i></span></div>
+</div></div></div></div>
+</div>
+
+</section>
+
+<section class="sec center">
+<h2>Tutto quello che trovi dentro</h2>
+<div class="feats" style="text-align:left">
+<div class="feat"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18M3 12h18"/></svg></span><b>Il tuo marchio</b><p>Logo, nome, partita IVA, contatti e colore tuoi su ogni PDF.</p></div>
+<div class="feat"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg></span><b>Listino servizi</b><p>Servizi, unità e prezzi salvati una volta, pronti da scegliere.</p></div>
+<div class="feat"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg></span><b>Totali automatici</b><p>Sconto, IVA e totale senza calcolatrice e senza errori.</p></div>
+<div class="feat"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></span><b>PDF pronto</b><p>Da aprire, scaricare, stampare o allegare dove vuoi.</p></div>
+<div class="feat"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg></span><b>Accetta su WhatsApp</b><p>Il cliente apre il link, tocca Accetta e ti arriva la conferma.</p></div>
+<div class="feat"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg></span><b>Intelligenza artificiale</b><p>Nel Plus: compila, confronta i prezzi e invia a comando.</p></div>
+</div>
+</section>
+
+<section class="sec center">
+<h2>Per chi è pensato</h2>
+<p class="lead">Per chi fa preventivi diversi per ogni cliente e oggi li scrive a mano, su Word o su un foglio Excel.</p>
+<div class="who"><span>Idraulici ed elettricisti</span><span>Artigiani e installatori</span><span>Imprese edili</span><span>Fotografi e videomaker</span><span>Wedding planner</span><span>Centri estetici</span><span>Consulenti e studi</span><span>Organizzatori di eventi</span></div>
+</section>
+
+<section class="sec center">
+<h2>Come si parte</h2>
+<ol class="path" style="text-align:left;width:100%">
+<li><b>Richiedi la demo</b>Compili la richiesta con logo e servizi, oppure ci scrivi su WhatsApp.</li>
+<li><b>La prepariamo noi</b>Ricevi le credenziali e trovi la dashboard già pronta con il tuo marchio e il tuo listino.</li>
+<li><b>La provi 7 giorni</b>La usi con i tuoi clienti veri. Se ti piace continui con l'abbonamento, altrimenti non paghi nulla.</li>
+</ol>
+</section>
+
+<section class="sec center" id="prezzi" data-bill="m">
+<h2>Prezzi</h2>
+<p class="lead">Solo abbonamento, senza costi di attivazione: la preparazione con il tuo logo e i tuoi servizi è inclusa.</p>
+<div class="bill"><div role="group" aria-label="Scegli la fatturazione"><button type="button" data-v="m" aria-pressed="true">Mensile</button><button type="button" data-v="y" aria-pressed="false">Annuale<small>risparmi</small></button></div></div>
+<div class="price-grid" style="text-align:left">
+<div class="plan">
+<h3>Smart</h3>
+<p class="for">Per fare preventivi curati in un minuto.</p>
+<p class="amount pm">19 €<small> / mese</small></p><p class="amount py">190 €<small> / anno</small></p>
+<p class="setup pm">Durata minima 3 mesi, poi disdici quando vuoi.</p><p class="setup py"><b>2 mesi gratis</b>: un solo pagamento all'anno (equivale a 15,80 € al mese).</p>
+<ul>
+<li><svg><use href="#ck"/></svg><span>Dashboard online con le tue credenziali, da computer e telefono</span></li>
+<li><svg><use href="#ck"/></svg><span>Il tuo logo, il tuo colore, il listino dei tuoi servizi</span></li>
+<li><svg><use href="#ck"/></svg><span>Preventivi illimitati</span></li>
+<li><svg><use href="#ck"/></svg><span>Sconto, IVA e totali calcolati da soli</span></li>
+<li><svg><use href="#ck"/></svg><span>PDF e invio al cliente su WhatsApp o email</span></li>
+<li><svg><use href="#ck"/></svg><span>Il cliente accetta su WhatsApp con un tocco</span></li>
+<li><svg><use href="#ck"/></svg><span>Aggiornamenti e assistenza inclusi</span></li>
+</ul>
+<a class="btn btn-line" href="https://wa.me/393297286904?text=Ciao%2C%20vorrei%20provare%20gratis%20Preventivo%20Smart%20per%20la%20mia%20attivit%C3%A0" target="_blank" rel="noopener">Prova Smart gratis</a>
+</div>
+<div class="plan best">
+<span class="tag">Con intelligenza artificiale</span>
+<h3>Smart Plus</h3>
+<p class="for">L'AI prepara il preventivo al posto tuo.</p>
+<p class="amount pm">29 €<small> / mese</small></p><p class="amount py">290 €<small> / anno</small></p>
+<p class="setup pm">Durata minima 3 mesi, poi disdici quando vuoi.</p><p class="setup py"><b>2 mesi gratis</b>: un solo pagamento all'anno (equivale a 24,20 € al mese).</p>
+<ul>
+<li><svg><use href="#ck"/></svg><span>Tutto quello di Smart</span></li>
+<li><svg><use href="#ck"/></svg><span><b>Preventivo da un messaggio</b>: l'AI compila le voci dal tuo listino e aggiunge quelle che mancano</span></li>
+<li><svg><use href="#ck"/></svg><span><b>Confronto con i prezzi medi in Italia</b> per ogni voce</span></li>
+<li><svg><use href="#ck"/></svg><span><b>Invio a comando</b>: «mandalo su WhatsApp a Mario», con il messaggio scritto dall'AI</span></li>
+<li><svg><use href="#ck"/></svg><span>Fino a 150 richieste AI al mese</span></li>
+<li><svg><use href="#ck"/></svg><span>Assistenza prioritaria su WhatsApp</span></li>
+</ul>
+<a class="btn btn-accent" href="https://wa.me/393297286904?text=Ciao%2C%20vorrei%20provare%20gratis%20Preventivo%20Smart%20Plus%20per%20la%20mia%20attivit%C3%A0" target="_blank" rel="noopener">Prova Smart Plus gratis</a>
+</div>
+</div>
+<p class="price-note">7 giorni di prova gratuita con il tuo marchio.</p>
+</section>
+
+<section class="sec center" id="faq">
+<h2>Domande frequenti</h2>
+<div class="faq" style="text-align:left">
+<details><summary>Devo installare qualcosa?</summary><p>No. Preventivo Smart è una pagina online: entri con email e password dal computer o dal telefono, da qualsiasi browser.</p></details>
+<details><summary>Chi inserisce logo e servizi?</summary><p>Lo facciamo noi prima di consegnartela: ci mandi logo, dati dell'attività e listino e la trovi già pronta. Poi puoi cambiare tutto da solo quando vuoi, dalle Impostazioni e dalla pagina Servizi.</p></details>
+<details><summary>Come funziona l'intelligenza artificiale?</summary><p>Nel piano Smart Plus scrivi o incolli la richiesta del cliente. L'AI prende le voci dal tuo listino con i tuoi prezzi esatti e, conoscendo il tuo settore, aggiunge quelle che mancano con un prezzo indicativo segnato «da verificare». Scrive anche il testo di presentazione. Tu controlli sempre prima di inviare.</p></details>
+<details><summary>Il confronto con i prezzi medi è affidabile?</summary><p>È una stima orientativa dell'AI sui prezzi mediamente praticati in Italia, non un listino ufficiale: i prezzi cambiano per zona e tipo di lavoro. Serve a capire al volo se una voce è molto sotto o molto sopra la media. Lo vedi solo tu: non compare nel preventivo del cliente.</p></details>
+<details><summary>L'AI può inviare il preventivo al posto mio?</summary><p>Sì: scrivi per esempio «mandalo su WhatsApp a Mario Bianchi» oppure «invialo a info@cliente.it». L'AI trova il cliente tra i tuoi preventivi, prepara il messaggio e apre l'invio. Su WhatsApp la chat si apre già compilata dal tuo numero e tocchi Invia: così il cliente riceve il messaggio da te.</p></details>
+<details><summary>Come fa il cliente ad accettare?</summary><p>Riceve un link: lo apre dal telefono, vede il preventivo con il tuo logo e tocca «Accetta su WhatsApp». Si apre WhatsApp con il messaggio di conferma verso di te e nella tua dashboard il preventivo passa ad «accettato» con data e ora. Può anche scaricare il PDF.</p></details>
+<details><summary>Cosa succede dopo i 7 giorni di prova?</summary><p>Se vuoi continuare scegli l'abbonamento mensile (minimo 3 mesi) o annuale. Se non continui non paghi nulla.</p></details>
+<details><summary>E se non rinnovo l'abbonamento?</summary><p>Alla scadenza hai ancora 5 giorni in cui tutto funziona normalmente. Poi l'accesso si blocca, ma i tuoi preventivi restano conservati e i PDF già inviati ai clienti restano apribili. Rinnovando riprendi da dove eri rimasto.</p></details>
+<details><summary>Posso passare da Smart a Smart Plus?</summary><p>Sì, in qualsiasi momento: scrivici e attiviamo le funzioni AI sulla tua dashboard, senza perdere nulla.</p></details>
+</div>
+</section>
+
+<section class="cta">
+<h2 style="font-size:clamp(24px,3.6vw,32px)">Vuoi vederlo con il tuo logo e i tuoi servizi?</h2>
+<p>Compila la richiesta oppure scrivici: prepariamo la tua demo gratuita di 7 giorni. Se ti piace continui con un abbonamento mensile o annuale.</p>
+<div class="actions">
+<a class="btn btn-accent" href="questionario.html?prodotto=preventivi">Compila la richiesta</a>
+<a class="btn btn-ghost" href="https://wa.me/393297286904?text=Ciao%2C%20vorrei%20la%20demo%20gratuita%20di%207%20giorni%20di%20Preventivo%20Smart%20per%20la%20mia%20attivit%C3%A0" target="_blank" rel="noopener">Scrivici su WhatsApp</a>
+</div>
+</section>
+</div>
 </main>
 
 <footer>
-  <div class="wrap">
-    <span>© <span id="yr">2026</span> Assistify Tech · <a href="mailto:info@assistifyitalia.it">info@assistifyitalia.it</a></span>
-    <span style="display:flex;gap:20px"><a href="privacy.html">Privacy e cookie</a><a href="terms-of-service.html">Termini</a></span>
-    <nav aria-label="Soluzioni per settore" style="flex-basis:100%;display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13.5px;padding-top:10px;border-top:1px solid rgba(127,127,127,.2)"><span style="font-weight:700">Soluzioni:</span><a href="prenotazioni-whatsapp-parrucchieri.html">Parrucchieri</a><a href="chatbot-whatsapp-centro-estetico.html">Centri estetici</a><a href="prenotazioni-whatsapp-studio-dentistico.html">Studi dentistici</a><a href="promemoria-appuntamenti-whatsapp.html">Promemoria appuntamenti</a><a href="preventivi-fotografi.html">Preventivi per fotografi</a></nav>
-  </div>
+<div class="wrap">
+<span>© <span id="yr">2026</span> Assistify Tech · <a href="mailto:info@assistifyitalia.it">info@assistifyitalia.it</a></span>
+<span style="display:flex;gap:20px"><a href="privacy.html">Privacy e cookie</a><a href="terms-of-service.html">Termini</a></span>
+<nav aria-label="Soluzioni per settore" style="flex-basis:100%;display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13.5px;padding-top:10px;border-top:1px solid rgba(127,127,127,.2)"><span style="font-weight:700">Soluzioni:</span><a href="prenotazioni-whatsapp-parrucchieri.html">Parrucchieri</a><a href="chatbot-whatsapp-centro-estetico.html">Centri estetici</a><a href="prenotazioni-whatsapp-studio-dentistico.html">Studi dentistici</a><a href="promemoria-appuntamenti-whatsapp.html">Promemoria appuntamenti</a><a href="preventivi-fotografi.html">Preventivi per fotografi</a></nav>
+</div>
 </footer>
 <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
 <script>(()=>{const b=document.querySelector('.menu-btn'),m=document.getElementById('mnav');if(!b||!m)return;b.addEventListener('click',()=>{const o=m.hidden;m.hidden=!o;b.setAttribute('aria-expanded',String(o));b.setAttribute('aria-label',o?'Chiudi il menu':'Apri il menu');});m.addEventListener('click',e=>{if(e.target.closest('a')){m.hidden=true;b.setAttribute('aria-expanded','false');}});})();</script>
-<script>(()=>{const box=document.getElementById('anim');if(!box)return;const els=[...box.querySelectorAll('.a')];const steps=[...document.querySelectorAll('#asteps div')];const btn=document.getElementById('accbtn');if(matchMedia('(prefers-reduced-motion: reduce)').matches){box.classList.add('static');return}let timers=[];const at=(ms,fn)=>timers.push(setTimeout(fn,ms));const mark=n=>steps.forEach((d,i)=>d.classList.toggle('on',i===n-1));function run(){timers.forEach(clearTimeout);timers=[];els.forEach(e=>e.classList.remove('on'));btn.classList.remove('pulse');mark(0);let t=500;at(t,()=>mark(1));els.filter(e=>e.dataset.s==='1').forEach(e=>{at(t,()=>e.classList.add('on'));t+=550});t+=400;at(t,()=>mark(2));els.filter(e=>e.dataset.s==='2').forEach(e=>{at(t,()=>e.classList.add('on'));t+=550});t+=600;at(t,()=>{mark(3);els.filter(e=>e.dataset.s==='3').forEach(e=>e.classList.add('on'))});t+=1900;at(t,()=>{mark(4);btn.classList.add('pulse')});t+=1500;at(t,()=>els.filter(e=>e.dataset.s==='4').forEach(e=>e.classList.add('on')));t+=3500;at(t,run)}let started=false;new IntersectionObserver(en=>{if(en[0].isIntersecting&&!started){started=true;run()}},{threshold:.25}).observe(box)})();</script>
+<script>(()=>{
+const box=document.getElementById('anim');if(!box)return;
+const els=[...box.querySelectorAll('.a')],steps=[...document.querySelectorAll('#asteps div')];
+const typed=document.getElementById('typed'),caret=document.getElementById('caret'),btn=document.getElementById('aibtn'),acc=document.getElementById('accbtn');
+const PH='Descrivi il lavoro richiesto dal cliente',TXT='Il sig. Bianchi deve sostituire 2 rubinetti in cucina, serve anche la manodopera';
+const show=s=>els.filter(e=>e.dataset.s===s);
+if(matchMedia('(prefers-reduced-motion: reduce)').matches){box.classList.add('static');typed.textContent=TXT;typed.classList.remove('ph');return}
+let timers=[];const at=(ms,fn)=>timers.push(setTimeout(fn,ms));
+const mark=n=>steps.forEach((d,i)=>d.classList.toggle('on',i===n-1));
+function run(){
+timers.forEach(clearTimeout);timers=[];els.forEach(e=>e.classList.remove('on'));btn.classList.remove('pulse');acc.classList.remove('pulse');
+typed.textContent=PH;typed.classList.add('ph');caret.hidden=true;mark(0);
+let t=600;
+at(t,()=>{mark(1);typed.textContent='';typed.classList.remove('ph');caret.hidden=false});
+[...TXT].forEach((c,i)=>at(t+i*36,()=>{typed.textContent=TXT.slice(0,i+1)}));
+t+=TXT.length*36+500;
+at(t,()=>{caret.hidden=true;btn.classList.add('pulse')});
+t+=1300;at(t,()=>mark(2));
+show('2').forEach(e=>{at(t,()=>e.classList.add('on'));t+=400});
+t+=900;at(t,()=>mark(3));
+show('3').forEach(e=>{at(t,()=>e.classList.add('on'));t+=650});
+t+=1300;at(t,()=>{mark(4);acc.classList.add('pulse')});
+t+=1900;at(t,()=>show('5').forEach(e=>e.classList.add('on')));
+t+=4600;at(t,run);
+}
+let started=false;new IntersectionObserver(en=>{if(en[0].isIntersecting&&!started){started=true;run()}},{threshold:.2}).observe(box);
+})();</script>
+<script>(()=>{const r=[...document.querySelectorAll('.reveal')];if(!('IntersectionObserver' in window)){r.forEach(e=>e.classList.add('in'));return}const io=new IntersectionObserver(en=>en.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.15});r.forEach(e=>io.observe(e))})();</script>
 <script>(()=>{document.querySelectorAll('[data-bill]').forEach(box=>{const bs=box.querySelectorAll('.bill button');bs.forEach(b=>b.addEventListener('click',()=>{box.dataset.bill=b.dataset.v;bs.forEach(x=>x.setAttribute('aria-pressed',String(x===b)))}))})})();</script>
 </body>
 </html>
